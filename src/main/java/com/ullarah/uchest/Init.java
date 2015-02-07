@@ -99,7 +99,7 @@ public class Init extends JavaPlugin {
     @SuppressWarnings("serial")
     public void onEnable() {
 
-        setMsgPrefix(ChatColor.GOLD + "[Chest] " + ChatColor.WHITE);
+        setMsgPrefix(ChatColor.GOLD + "[uChest] " + ChatColor.WHITE);
 
         setPlugin(this);
 
