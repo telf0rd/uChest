@@ -1,0 +1,31 @@
+name: uChest
+version: ${project.version}-${build.number}
+description: Various Chests
+
+author: Ullarah
+
+main: com.ullarah.uchest.Init
+
+commands:
+  chest:
+    description: The main command for the plugin.
+    usage: |
+      <command> maintenance : Puts the system in/out of maintenance mode.
+      <command> random : Swaps out items in chest for random items.
+      <command> reset : Clears the entire donation chest.
+  dchest:
+    description: Views the donation chest.
+    usage: |
+      <command> : Views the donation chest.
+  rchest:
+    description: Views the random chest.
+    usage: |
+      <command> : Views the random chest.
+
+permissions:
+  chest.staff:
+    description: Grant all of the staff commands
+    children:
+      chest.maintenance: true
+      chest.random: true
+      chest.reset: true
