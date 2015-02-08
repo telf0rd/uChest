@@ -14,7 +14,7 @@ public class Commands implements CommandExecutor {
     public boolean onCommand( CommandSender sender, Command command, String s, String[] args ) {
 
         if( command.getName().equalsIgnoreCase( "chest" ) ) commandChest(sender, args);
-        if( command.getName().equalsIgnoreCase( "dchest" ) ) commandDChest(sender);
+        if( command.getName().equalsIgnoreCase( "dchest" ) ) commandDChest(sender, args);
         if( command.getName().equalsIgnoreCase( "rchest" ) ) commandRChest(sender);
 
         return true;
@@ -80,14 +80,44 @@ public class Commands implements CommandExecutor {
 
     }
 
-    private void commandDChest(CommandSender sender){
+    private void commandDChest(CommandSender sender, String[] args){
 
-        if (!(sender instanceof Player))
+        String consoleTools = Init.getMsgPrefix() + ChatColor.WHITE + "random";
+
+        if ( args.length == 0 ) if (!(sender instanceof Player))
             sender.sendMessage("Consoles can't use this command!");
         else if (!Init.getMaintenanceCheck())
             ((Player) sender).openInventory(Init.getChestDonationHolder().getInventory());
         else
             sender.sendMessage(Init.getMaintenanceMessage());
+
+        else try {
+
+            switch ( validCommands.valueOf( args[0].toUpperCase() ) ) {
+
+                case RANDOM:
+                    if( !Init.getMaintenanceCheck())
+                        Random.fillDonationChest(sender);
+                    else
+                        sender.sendMessage(Init.getMaintenanceMessage());
+                    break;
+
+                default:
+                    if( !( sender instanceof Player ) )
+                        sender.sendMessage( consoleTools );
+                    else
+                        ((Player) sender).openInventory(Init.getChestDonationHolder().getInventory());
+
+            }
+
+        } catch ( IllegalArgumentException e ) {
+
+            if( !( sender instanceof Player ) )
+                sender.sendMessage(consoleTools);
+            else
+                Help.runHelp(sender);
+
+        }
 
     }
 

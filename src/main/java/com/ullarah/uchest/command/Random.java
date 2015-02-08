@@ -31,6 +31,7 @@ public class Random {
             }
 
             Bukkit.broadcastMessage(Init.getMsgPrefix() + ChatColor.GREEN + "Donation Chest has been randomized with new items!");
+            Bukkit.broadcastMessage(Init.getMsgPrefix() + ChatColor.GREEN + "Quick! Use /dchest to open it up!");
 
         } else sender.sendMessage(Init.getMsgPermDeny());
 

@@ -6,7 +6,8 @@ import org.bukkit.ChatColor;
 
 class Task {
 
-    private static final long chestIntervalFinal = Init.getPlugin().getConfig().getLong("interval") * 20;
+    private static final long chestIntervalFinal = Init.getPlugin().getConfig().getLong("raninterval") * 20;
+    private static final long chestStayFinal = Init.getPlugin().getConfig().getLong("ranstay") * 20;
     private static final long chestAmountFinal = Init.getPlugin().getConfig().getLong("ranamount");
 
     private static final long chestCountdownFinal = Init.getPlugin().getConfig().getLong("countdown") * 20;
@@ -72,7 +73,7 @@ class Task {
                     public void run() {
                         Init.getChestRandomInventory().clear();
                     }
-                },15);
+                },chestStayFinal);
 
             }
 

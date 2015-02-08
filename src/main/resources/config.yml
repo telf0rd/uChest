@@ -1,6 +1,7 @@
 countdown: 10800
-interval: 5
-ranamount: 3
+raninterval: 10
+ranstay: 1
+ranamount: 2
 maintenance: false
 allowedmaterials:
  - ANVIL
