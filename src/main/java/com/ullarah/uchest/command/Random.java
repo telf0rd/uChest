@@ -1,7 +1,6 @@
 package com.ullarah.uchest.command;
 
 import com.ullarah.uchest.Init;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -13,9 +12,9 @@ import java.util.List;
 
 public class Random {
 
-    public static void fillDonationChest(CommandSender sender){
+    public static void fillDonationChest(CommandSender sender) {
 
-        if ( sender.hasPermission("chest.random") || !( sender instanceof Player ) ) {
+        if (sender.hasPermission("chest.random") || !(sender instanceof Player)) {
 
             for (int i = 0; i < Init.getChestDonationInventory().getSize(); i++) {
 
@@ -37,7 +36,7 @@ public class Random {
 
     }
 
-    public static void setRandomItem(Integer amount){
+    public static void setRandomItem(Integer amount) {
 
         java.util.Random chestRandomItem = new java.util.Random();
         List<String> materialList = Init.getPlugin().getConfig().getStringList("allowedmaterials");

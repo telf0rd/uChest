@@ -6,11 +6,11 @@ import org.bukkit.entity.Player;
 
 public class Help {
 
-    public static void runHelp(CommandSender sender){
+    public static void runHelp(CommandSender sender) {
 
-        if(sender instanceof Player) {
+        if (sender instanceof Player) {
 
-            sender.sendMessage(new String[] {
+            sender.sendMessage(new String[]{
                     ChatColor.AQUA + "Mixed Chest Help",
                     "------------------------------------------",
                     ChatColor.GOLD + " ▪ /dchest",
@@ -21,9 +21,9 @@ public class Help {
                     ChatColor.RED + "Just remember that the chest resets every 3 hours."
             });
 
-            if(sender.hasPermission("chest.staff")){
+            if (sender.hasPermission("chest.staff")) {
 
-                sender.sendMessage(new String[] {
+                sender.sendMessage(new String[]{
                         "------------------------------------------",
                         ChatColor.GOLD + " ▪ /chest maintenance <on|off>",
                         ChatColor.YELLOW + "   Puts the donation chest in maintenance mode.",
