@@ -18,7 +18,11 @@ public class Help {
                     ChatColor.GOLD + " ▪ /rchest",
                     ChatColor.YELLOW + "   Opens the random chest.",
                     ChatColor.GOLD + " ▪ /xchest",
-                    ChatColor.YELLOW + "   Opens the experience chest."
+                    ChatColor.YELLOW + "   Opens the experience chest.",
+                    ChatColor.GOLD + " ▪ /hchest",
+                    ChatColor.YELLOW + "   Opens the holding chest.",
+                    ChatColor.GOLD + " ▪ /schest",
+                    ChatColor.YELLOW + "   Opens the swapping chest."
             });
 
             if (sender.hasPermission("chest.staff")) {
@@ -34,7 +38,11 @@ public class Help {
                         ChatColor.GOLD + " ▪ /rchest toggle",
                         ChatColor.YELLOW + "   Starts / Stops the random chest.",
                         ChatColor.GOLD + " ▪ /xchest toggle",
-                        ChatColor.YELLOW + "   Starts / Stops the experience chest."
+                        ChatColor.YELLOW + "   Starts / Stops the experience chest.",
+                        ChatColor.GOLD + " ▪ /hchest toggle",
+                        ChatColor.YELLOW + "   Starts / Stops the holding chest.",
+                        ChatColor.GOLD + " ▪ /schest toggle",
+                        ChatColor.YELLOW + "   Starts / Stops the swapping chest."
                 });
 
             }

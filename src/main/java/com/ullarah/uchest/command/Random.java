@@ -46,7 +46,7 @@ public class Random {
                 getPlugin().getConfig().getConfigurationSection("materials").getKeys(false));
 
         for (int i = 0; i < amount; ++i) {
-            getChestRandomInventory().setItem(chestRandomItem.nextInt(53) + 1, new ItemStack(
+            getChestRandomInventory().setItem(chestRandomItem.nextInt(53), new ItemStack(
                     Material.getMaterial(materialList.get(chestRandomItem.nextInt(materialList.size())))));
         }
 

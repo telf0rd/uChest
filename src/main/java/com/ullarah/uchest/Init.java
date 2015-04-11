@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,12 +15,14 @@ public class Init extends JavaPlugin {
             ChatColor.DARK_GREEN + "Donation Chest");
     private static final Inventory chestRandomInventory = Bukkit.createInventory(getChestRandomHolder(), 54,
             ChatColor.DARK_GREEN + "Random Chest");
-
+    private static final Inventory chestSwapInventory = Bukkit.createInventory(getChestSwapHolder(), 27,
+            ChatColor.DARK_GREEN + "Swap Chest");
+    public static Boolean chestSwapBusy;
+    public static ItemStack[] chestSwapItemStack;
     private static Plugin plugin;
     private static String msgPrefix = null;
     private static String msgPermDeny = null;
     private static String msgNoConsole = null;
-
     private static Boolean maintenanceCheck;
     private static String maintenanceMessage;
 
@@ -33,6 +36,12 @@ public class Init extends JavaPlugin {
         @Override
         public Inventory getInventory() {
             return getChestRandomInventory();
+        }
+    };
+    private static InventoryHolder chestSwapHolder = new InventoryHolder() {
+        @Override
+        public Inventory getInventory() {
+            return chestSwapInventory;
         }
     };
 
@@ -87,6 +96,7 @@ public class Init extends JavaPlugin {
     public static InventoryHolder getChestDonationHolder() {
         return chestDonationHolder;
     }
+
     private static void setChestDonationHolder(InventoryHolder chestDonationHolder) {
         Init.chestDonationHolder = chestDonationHolder;
     }
@@ -94,13 +104,23 @@ public class Init extends JavaPlugin {
     public static InventoryHolder getChestRandomHolder() {
         return chestRandomHolder;
     }
+
     private static void setChestRandomHolder(InventoryHolder chestRandomHolder) {
         Init.chestRandomHolder = chestRandomHolder;
+    }
+
+    public static InventoryHolder getChestSwapHolder() {
+        return chestSwapHolder;
+    }
+
+    private static void setChestSwapHolder(InventoryHolder chestSwapHolder) {
+        Init.chestSwapHolder = chestSwapHolder;
     }
 
     public static Inventory getChestDonationInventory() {
         return chestDonationInventory;
     }
+
     public static Inventory getChestRandomInventory() {
         return chestRandomInventory;
     }
@@ -121,6 +141,8 @@ public class Init extends JavaPlugin {
         getCommand("dchest").setExecutor(new Commands());
         getCommand("rchest").setExecutor(new Commands());
         getCommand("xchest").setExecutor(new Commands());
+        getCommand("hchest").setExecutor(new Commands());
+        getCommand("schest").setExecutor(new Commands());
 
         pluginManager.registerEvents(new Events(), getPlugin());
 
@@ -136,6 +158,9 @@ public class Init extends JavaPlugin {
 
         setChestDonationHolder(chestDonationHolder);
         setChestRandomHolder(chestRandomHolder);
+        setChestSwapHolder(chestSwapHolder);
+
+        chestSwapBusy = false;
 
     }
 

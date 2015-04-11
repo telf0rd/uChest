@@ -8,7 +8,7 @@
     
     <name>uChest</name>
     <description>Mixed chests</description>
-    <version>1.0.5</version>
+    <version>1.0.61</version>
 
     <build>
         <defaultGoal>clean package</defaultGoal>

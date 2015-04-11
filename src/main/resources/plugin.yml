@@ -25,6 +25,14 @@ commands:
     description: Views the experience chest.
     usage: |
       <command> : Views the experience chest.
+  hchest:
+    description: Views the holding chest.
+    usage: |
+      <command> : Views the holding chest.
+  schest:
+    description: Views the swapping chest.
+    usage: |
+      <command> : Views the swapping chest.
 
 permissions:
   chest.staff:
