@@ -3,254 +3,254 @@ raninterval: 10
 ranstay: 1
 ranamount: 2
 maintenance: false
-allowedmaterials:
- - ANVIL
- - APPLE
- - ARROW
- - BAKED_POTATO
- - BED
- - BLAZE_POWDER
- - BLAZE_ROD
- - BOAT
- - BONE
- - BOOK
- - BOOK_AND_QUILL
- - BOOKSHELF
- - BOW
- - BOWL
- - BREAD
- - BRICK
- - BROWN_MUSHROOM
- - BUCKET
- - CACTUS
- - CAKE
- - CARPET
- - CARROT
- - CAULDRON
- - CHAINMAIL_BOOTS
- - CHAINMAIL_CHESTPLATE
- - CHAINMAIL_HELMET
- - CHAINMAIL_LEGGINGS
- - CHEST
- - CLAY
- - CLAY_BALL
- - CLAY_BRICK
- - COAL
- - COAL_BLOCK
- - COAL_ORE
- - COBBLE_WALL
- - COBBLESTONE
- - COCOA
- - COMPASS
- - COOKED_BEEF
- - COOKED_CHICKEN
- - COOKED_FISH
- - COOKIE
- - CROPS
- - DAYLIGHT_DETECTOR
- - DIAMOND
- - DIAMOND_AXE
- - DIAMOND_BARDING
- - DIAMOND_BLOCK
- - DIAMOND_BOOTS
- - DIAMOND_CHESTPLATE
- - DIAMOND_HELMET
- - DIAMOND_HOE
- - DIAMOND_LEGGINGS
- - DIAMOND_ORE
- - DIAMOND_PICKAXE
- - DIAMOND_SPADE
- - DIAMOND_SWORD
- - DIRT
- - DISPENSER
- - DROPPER
- - EGG
- - EMERALD
- - EMERALD_BLOCK
- - EMERALD_ORE
- - EMPTY_MAP
- - ENCHANTMENT_TABLE
- - ENDER_CHEST
- - ENDER_PEARL
- - ENDER_STONE
- - EXP_BOTTLE
- - EXPLOSIVE_MINECART
- - EYE_OF_ENDER
- - FEATHER
- - FENCE
- - FENCE_GATE
- - FERMENTED_SPIDER_EYE
- - FISHING_ROD
- - FLINT
- - FLINT_AND_STEEL
- - FLOWER_POT
- - FURNACE
- - GHAST_TEAR
- - GLASS
- - GLASS_BOTTLE
- - GLOWSTONE
- - GLOWSTONE_DUST
- - GOLD_AXE
- - GOLD_BARDING
- - GOLD_BLOCK
- - GOLD_BOOTS
- - GOLD_CHESTPLATE
- - GOLD_HELMET
- - GOLD_HOE
- - GOLD_INGOT
- - GOLD_LEGGINGS
- - GOLD_NUGGET
- - GOLD_ORE
- - GOLD_PICKAXE
- - GOLD_PLATE
- - GOLD_SPADE
- - GOLD_SWORD
- - GOLDEN_APPLE
- - GOLDEN_CARROT
- - GRASS
- - GRAVEL
- - GRILLED_PORK
- - HARD_CLAY
- - HAY_BLOCK
- - HOPPER
- - HOPPER_MINECART
- - ICE
- - INK_SACK
- - IRON_AXE
- - IRON_BARDING
- - IRON_BLOCK
- - IRON_BOOTS
- - IRON_CHESTPLATE
- - IRON_DOOR
- - IRON_DOOR_BLOCK
- - IRON_FENCE
- - IRON_HELMET
- - IRON_HOE
- - IRON_INGOT
- - IRON_LEGGINGS
- - IRON_ORE
- - IRON_PICKAXE
- - IRON_PLATE
- - IRON_SPADE
- - IRON_SWORD
- - ITEM_FRAME
- - JACK_O_LANTERN
- - JUKEBOX
- - LADDER
- - LAPIS_BLOCK
- - LAPIS_ORE
- - LAVA_BUCKET
- - LEASH
- - LEATHER
- - LEATHER_BOOTS
- - LEATHER_CHESTPLATE
- - LEATHER_HELMET
- - LEATHER_LEGGINGS
- - LEAVES
- - LEVER
- - LOCKED_CHEST
- - LOG
- - LONG_GRASS
- - MAGMA_CREAM
- - MELON
- - MELON_BLOCK
- - MELON_SEEDS
- - MELON_STEM
- - MILK_BUCKET
- - MINECART
- - MOSSY_COBBLESTONE
- - MUSHROOM_SOUP
- - MYCEL
- - NAME_TAG
- - NETHER_BRICK
- - NETHER_BRICK_ITEM
- - NETHER_FENCE
- - NETHER_STALK
- - NETHER_STAR
- - NETHER_WARTS
- - NETHERRACK
- - NOTE_BLOCK
- - OBSIDIAN
- - PAINTING
- - PAPER
- - POISONOUS_POTATO
- - PORK
- - POTATO
- - POTION
- - POWERED_MINECART
- - POWERED_RAIL
- - PUMPKIN
- - PUMPKIN_PIE
- - PUMPKIN_SEEDS
- - QUARTZ
- - QUARTZ_BLOCK
- - QUARTZ_ORE
- - RAILS
- - RAW_BEEF
- - RAW_CHICKEN
- - RAW_FISH
- - RED_MUSHROOM
- - RED_ROSE
- - REDSTONE
- - REDSTONE_BLOCK
- - REDSTONE_COMPARATOR
- - REDSTONE_ORE
- - REDSTONE_WIRE
- - ROTTEN_FLESH
- - SADDLE
- - SAND
- - SANDSTONE
- - SAPLING
- - SEEDS
- - SHEARS
- - SIGN
- - SLIME_BALL
- - SMOOTH_BRICK
- - SNOW
- - SNOW_BALL
- - SNOW_BLOCK
- - SOIL
- - SOUL_SAND
- - SPECKLED_MELON
- - SPIDER_EYE
- - STAINED_CLAY
- - STICK
- - STONE
- - STONE_AXE
- - STONE_BUTTON
- - STONE_HOE
- - STONE_PICKAXE
- - STONE_PLATE
- - STONE_SPADE
- - STONE_SWORD
- - STORAGE_MINECART
- - STRING
- - SUGAR
- - SUGAR_CANE
- - SULPHUR
- - THIN_GLASS
- - TNT
- - TORCH
- - TRAP_DOOR
- - TRAPPED_CHEST
- - VINE
- - WATCH
- - WATER_BUCKET
- - WATER_LILY
- - WEB
- - WHEAT
- - WOOD
- - WOOD_AXE
- - WOOD_BUTTON
- - WOOD_DOOR
- - WOOD_DOUBLE_STEP
- - WOOD_HOE
- - WOOD_PICKAXE
- - WOOD_PLATE
- - WOOD_SPADE
- - WOOD_STEP
- - WOOD_SWORD
- - WOODEN_DOOR
- - WOOL
- - WORKBENCH
- - YELLOW_FLOWER
+materials:
+  ANVIL                : 1
+  APPLE                : 1
+  ARROW                : 1
+  BAKED_POTATO         : 1
+  BED                  : 1
+  BLAZE_POWDER         : 1
+  BLAZE_ROD            : 1
+  BOAT                 : 1
+  BONE                 : 1
+  BOOK                 : 1
+  BOOK_AND_QUILL       : 1
+  BOOKSHELF            : 1
+  BOW                  : 1
+  BOWL                 : 1
+  BREAD                : 1
+  BRICK                : 1
+  BROWN_MUSHROOM       : 1
+  BUCKET               : 1
+  CACTUS               : 1
+  CAKE                 : 1
+  CARPET               : 1
+  CARROT               : 1
+  CAULDRON             : 1
+  CHAINMAIL_BOOTS      : 1
+  CHAINMAIL_CHESTPLATE : 1
+  CHAINMAIL_HELMET     : 1
+  CHAINMAIL_LEGGINGS   : 1
+  CHEST                : 1
+  CLAY                 : 1
+  CLAY_BALL            : 1
+  CLAY_BRICK           : 1
+  COAL                 : 1
+  COAL_BLOCK           : 1
+  COAL_ORE             : 1
+  COBBLE_WALL          : 1
+  COBBLESTONE          : 1
+  COCOA                : 1
+  COMPASS              : 1
+  COOKED_BEEF          : 1
+  COOKED_CHICKEN       : 1
+  COOKED_FISH          : 1
+  COOKIE               : 1
+  CROPS                : 1
+  DAYLIGHT_DETECTOR    : 1
+  DIAMOND              : 1
+  DIAMOND_AXE          : 1
+  DIAMOND_BARDING      : 1
+  DIAMOND_BLOCK        : 1
+  DIAMOND_BOOTS        : 1
+  DIAMOND_CHESTPLATE   : 1
+  DIAMOND_HELMET       : 1
+  DIAMOND_HOE          : 1
+  DIAMOND_LEGGINGS     : 1
+  DIAMOND_ORE          : 1
+  DIAMOND_PICKAXE      : 1
+  DIAMOND_SPADE        : 1
+  DIAMOND_SWORD        : 1
+  DIRT                 : 1
+  DISPENSER            : 1
+  DROPPER              : 1
+  EGG                  : 1
+  EMERALD              : 1
+  EMERALD_BLOCK        : 1
+  EMERALD_ORE          : 1
+  EMPTY_MAP            : 1
+  ENCHANTMENT_TABLE    : 1
+  ENDER_CHEST          : 1
+  ENDER_PEARL          : 1
+  ENDER_STONE          : 1
+  EXP_BOTTLE           : 1
+  EXPLOSIVE_MINECART   : 1
+  EYE_OF_ENDER         : 1
+  FEATHER              : 1
+  FENCE                : 1
+  FENCE_GATE           : 1
+  FERMENTED_SPIDER_EYE : 1
+  FISHING_ROD          : 1
+  FLINT                : 1
+  FLINT_AND_STEEL      : 1
+  FLOWER_POT           : 1
+  FURNACE              : 1
+  GHAST_TEAR           : 1
+  GLASS                : 1
+  GLASS_BOTTLE         : 1
+  GLOWSTONE            : 1
+  GLOWSTONE_DUST       : 1
+  GOLD_AXE             : 1
+  GOLD_BARDING         : 1
+  GOLD_BLOCK           : 1
+  GOLD_BOOTS           : 1
+  GOLD_CHESTPLATE      : 1
+  GOLD_HELMET          : 1
+  GOLD_HOE             : 1
+  GOLD_INGOT           : 1
+  GOLD_LEGGINGS        : 1
+  GOLD_NUGGET          : 1
+  GOLD_ORE             : 1
+  GOLD_PICKAXE         : 1
+  GOLD_PLATE           : 1
+  GOLD_SPADE           : 1
+  GOLD_SWORD           : 1
+  GOLDEN_APPLE         : 1
+  GOLDEN_CARROT        : 1
+  GRASS                : 1
+  GRAVEL               : 1
+  GRILLED_PORK         : 1
+  HARD_CLAY            : 1
+  HAY_BLOCK            : 1
+  HOPPER               : 1
+  HOPPER_MINECART      : 1
+  ICE                  : 1
+  INK_SACK             : 1
+  IRON_AXE             : 1
+  IRON_BARDING         : 1
+  IRON_BLOCK           : 1
+  IRON_BOOTS           : 1
+  IRON_CHESTPLATE      : 1
+  IRON_DOOR            : 1
+  IRON_DOOR_BLOCK      : 1
+  IRON_FENCE           : 1
+  IRON_HELMET          : 1
+  IRON_HOE             : 1
+  IRON_INGOT           : 1
+  IRON_LEGGINGS        : 1
+  IRON_ORE             : 1
+  IRON_PICKAXE         : 1
+  IRON_PLATE           : 1
+  IRON_SPADE           : 1
+  IRON_SWORD           : 1
+  ITEM_FRAME           : 1
+  JACK_O_LANTERN       : 1
+  JUKEBOX              : 1
+  LADDER               : 1
+  LAPIS_BLOCK          : 1
+  LAPIS_ORE            : 1
+  LAVA_BUCKET          : 1
+  LEASH                : 1
+  LEATHER              : 1
+  LEATHER_BOOTS        : 1
+  LEATHER_CHESTPLATE   : 1
+  LEATHER_HELMET       : 1
+  LEATHER_LEGGINGS     : 1
+  LEAVES               : 1
+  LEVER                : 1
+  LOCKED_CHEST         : 1
+  LOG                  : 1
+  LONG_GRASS           : 1
+  MAGMA_CREAM          : 1
+  MELON                : 1
+  MELON_BLOCK          : 1
+  MELON_SEEDS          : 1
+  MELON_STEM           : 1
+  MILK_BUCKET          : 1
+  MINECART             : 1
+  MOSSY_COBBLESTONE    : 1
+  MUSHROOM_SOUP        : 1
+  MYCEL                : 1
+  NAME_TAG             : 1
+  NETHER_BRICK         : 1
+  NETHER_BRICK_ITEM    : 1
+  NETHER_FENCE         : 1
+  NETHER_STALK         : 1
+  NETHER_STAR          : 1
+  NETHER_WARTS         : 1
+  NETHERRACK           : 1
+  NOTE_BLOCK           : 1
+  OBSIDIAN             : 1
+  PAINTING             : 1
+  PAPER                : 1
+  POISONOUS_POTATO     : 1
+  PORK                 : 1
+  POTATO               : 1
+  POTION               : 1
+  POWERED_MINECART     : 1
+  POWERED_RAIL         : 1
+  PUMPKIN              : 1
+  PUMPKIN_PIE          : 1
+  PUMPKIN_SEEDS        : 1
+  QUARTZ               : 1
+  QUARTZ_BLOCK         : 1
+  QUARTZ_ORE           : 1
+  RAILS                : 1
+  RAW_BEEF             : 1
+  RAW_CHICKEN          : 1
+  RAW_FISH             : 1
+  RED_MUSHROOM         : 1
+  RED_ROSE             : 1
+  REDSTONE             : 1
+  REDSTONE_BLOCK       : 1
+  REDSTONE_COMPARATOR  : 1
+  REDSTONE_ORE         : 1
+  REDSTONE_WIRE        : 1
+  ROTTEN_FLESH         : 1
+  SADDLE               : 1
+  SAND                 : 1
+  SANDSTONE            : 1
+  SAPLING              : 1
+  SEEDS                : 1
+  SHEARS               : 1
+  SIGN                 : 1
+  SLIME_BALL           : 1
+  SMOOTH_BRICK         : 1
+  SNOW                 : 1
+  SNOW_BALL            : 1
+  SNOW_BLOCK           : 1
+  SOIL                 : 1
+  SOUL_SAND            : 1
+  SPECKLED_MELON       : 1
+  SPIDER_EYE           : 1
+  STAINED_CLAY         : 1
+  STICK                : 1
+  STONE                : 1
+  STONE_AXE            : 1
+  STONE_BUTTON         : 1
+  STONE_HOE            : 1
+  STONE_PICKAXE        : 1
+  STONE_PLATE          : 1
+  STONE_SPADE          : 1
+  STONE_SWORD          : 1
+  STORAGE_MINECART     : 1
+  STRING               : 1
+  SUGAR                : 1
+  SUGAR_CANE           : 1
+  SULPHUR              : 1
+  THIN_GLASS           : 1
+  TNT                  : 1
+  TORCH                : 1
+  TRAP_DOOR            : 1
+  TRAPPED_CHEST        : 1
+  VINE                 : 1
+  WATCH                : 1
+  WATER_BUCKET         : 1
+  WATER_LILY           : 1
+  WEB                  : 1
+  WHEAT                : 1
+  WOOD                 : 1
+  WOOD_AXE             : 1
+  WOOD_BUTTON          : 1
+  WOOD_DOOR            : 1
+  WOOD_DOUBLE_STEP     : 1
+  WOOD_HOE             : 1
+  WOOD_PICKAXE         : 1
+  WOOD_PLATE           : 1
+  WOOD_SPADE           : 1
+  WOOD_STEP            : 1
+  WOOD_SWORD           : 1
+  WOODEN_DOOR          : 1
+  WOOL                 : 1
+  WORKBENCH            : 1
+  YELLOW_FLOWER        : 1

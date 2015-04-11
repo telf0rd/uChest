@@ -12,8 +12,9 @@ public class Init extends JavaPlugin {
 
     private static final Inventory chestDonationInventory = Bukkit.createInventory(getChestDonationHolder(), 54,
             ChatColor.DARK_GREEN + "Donation Chest");
-    private static final Inventory chestRandomInventory = Bukkit.createInventory(getChestDonationHolder(), 54,
+    private static final Inventory chestRandomInventory = Bukkit.createInventory(getChestRandomHolder(), 54,
             ChatColor.DARK_GREEN + "Random Chest");
+
     private static Plugin plugin;
     private static String msgPrefix = null;
     private static String msgPermDeny = null;
@@ -21,6 +22,7 @@ public class Init extends JavaPlugin {
 
     private static Boolean maintenanceCheck;
     private static String maintenanceMessage;
+
     private static InventoryHolder chestDonationHolder = new InventoryHolder() {
         @Override
         public Inventory getInventory() {
@@ -85,7 +87,6 @@ public class Init extends JavaPlugin {
     public static InventoryHolder getChestDonationHolder() {
         return chestDonationHolder;
     }
-
     private static void setChestDonationHolder(InventoryHolder chestDonationHolder) {
         Init.chestDonationHolder = chestDonationHolder;
     }
@@ -93,7 +94,6 @@ public class Init extends JavaPlugin {
     public static InventoryHolder getChestRandomHolder() {
         return chestRandomHolder;
     }
-
     private static void setChestRandomHolder(InventoryHolder chestRandomHolder) {
         Init.chestRandomHolder = chestRandomHolder;
     }
@@ -101,7 +101,6 @@ public class Init extends JavaPlugin {
     public static Inventory getChestDonationInventory() {
         return chestDonationInventory;
     }
-
     public static Inventory getChestRandomInventory() {
         return chestRandomInventory;
     }
@@ -121,6 +120,7 @@ public class Init extends JavaPlugin {
         getCommand("chest").setExecutor(new Commands());
         getCommand("dchest").setExecutor(new Commands());
         getCommand("rchest").setExecutor(new Commands());
+        getCommand("xchest").setExecutor(new Commands());
 
         pluginManager.registerEvents(new Events(), getPlugin());
 

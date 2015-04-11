@@ -17,8 +17,8 @@ public class Help {
                     ChatColor.YELLOW + "   Opens the donation chest.",
                     ChatColor.GOLD + " ▪ /rchest",
                     ChatColor.YELLOW + "   Opens the random chest.",
-                    "------------------------------------------",
-                    ChatColor.RED + "Just remember that the chest resets every 3 hours."
+                    ChatColor.GOLD + " ▪ /xchest",
+                    ChatColor.YELLOW + "   Opens the experience chest."
             });
 
             if (sender.hasPermission("chest.staff")) {
@@ -32,7 +32,9 @@ public class Help {
                         ChatColor.GOLD + " ▪ /dchest reset",
                         ChatColor.YELLOW + "   Clears the entire donation chest.",
                         ChatColor.GOLD + " ▪ /rchest toggle",
-                        ChatColor.YELLOW + "   Starts / Stops the random chest."
+                        ChatColor.YELLOW + "   Starts / Stops the random chest.",
+                        ChatColor.GOLD + " ▪ /xchest toggle",
+                        ChatColor.YELLOW + "   Starts / Stops the experience chest."
                 });
 
             }

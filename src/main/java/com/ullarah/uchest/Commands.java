@@ -4,11 +4,15 @@ import com.ullarah.uchest.command.Help;
 import com.ullarah.uchest.command.Maintenance;
 import com.ullarah.uchest.command.Random;
 import com.ullarah.uchest.command.Reset;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+
+import static com.ullarah.uchest.Init.*;
 
 public class Commands implements CommandExecutor {
 
@@ -18,6 +22,7 @@ public class Commands implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("chest")) commandChest(sender, args);
         if (command.getName().equalsIgnoreCase("dchest")) commandDChest(sender, args);
         if (command.getName().equalsIgnoreCase("rchest")) commandRChest(sender);
+        if (command.getName().equalsIgnoreCase("xchest")) commandXChest(sender);
 
         return true;
 
@@ -25,14 +30,14 @@ public class Commands implements CommandExecutor {
 
     private void commandChest(CommandSender sender, String[] args) {
 
-        String consoleTools = Init.getMsgPrefix() + ChatColor.WHITE + "maintenance | random | reset";
+        String consoleTools = getMsgPrefix() + ChatColor.WHITE + "maintenance | random | reset";
 
         if (args.length == 0) if (!(sender instanceof Player))
             sender.sendMessage(consoleTools);
-        else if (!Init.getMaintenanceCheck())
+        else if (!getMaintenanceCheck())
             Help.runHelp(sender);
         else
-            sender.sendMessage(Init.getMaintenanceMessage());
+            sender.sendMessage(getMaintenanceMessage());
 
         else try {
 
@@ -40,7 +45,7 @@ public class Commands implements CommandExecutor {
 
                 case HELP:
                     if (!(sender instanceof Player))
-                        sender.sendMessage(Init.getMsgNoConsole());
+                        sender.sendMessage(getMsgNoConsole());
                     else
                         Help.runHelp(sender);
                     break;
@@ -50,17 +55,17 @@ public class Commands implements CommandExecutor {
                     break;
 
                 case RANDOM:
-                    if (!Init.getMaintenanceCheck())
+                    if (!getMaintenanceCheck())
                         Random.fillDonationChest(sender);
                     else
-                        sender.sendMessage(Init.getMaintenanceMessage());
+                        sender.sendMessage(getMaintenanceMessage());
                     break;
 
                 case RESET:
-                    if (!Init.getMaintenanceCheck())
+                    if (!getMaintenanceCheck())
                         Reset.resetDonationChest(sender);
                     else
-                        sender.sendMessage(Init.getMaintenanceMessage());
+                        sender.sendMessage(getMaintenanceMessage());
                     break;
 
                 default:
@@ -84,31 +89,31 @@ public class Commands implements CommandExecutor {
 
     private void commandDChest(CommandSender sender, String[] args) {
 
-        String consoleTools = Init.getMsgPrefix() + ChatColor.WHITE + "random";
+        String consoleTools = getMsgPrefix() + ChatColor.WHITE + "random";
 
         if (args.length == 0) if (!(sender instanceof Player))
             sender.sendMessage("Consoles can't use this command!");
-        else if (!Init.getMaintenanceCheck())
-            ((Player) sender).openInventory(Init.getChestDonationHolder().getInventory());
+        else if (!getMaintenanceCheck())
+            ((Player) sender).openInventory(getChestDonationHolder().getInventory());
         else
-            sender.sendMessage(Init.getMaintenanceMessage());
+            sender.sendMessage(getMaintenanceMessage());
 
         else try {
 
             switch (validCommands.valueOf(args[0].toUpperCase())) {
 
                 case RANDOM:
-                    if (!Init.getMaintenanceCheck())
+                    if (!getMaintenanceCheck())
                         Random.fillDonationChest(sender);
                     else
-                        sender.sendMessage(Init.getMaintenanceMessage());
+                        sender.sendMessage(getMaintenanceMessage());
                     break;
 
                 default:
                     if (!(sender instanceof Player))
                         sender.sendMessage(consoleTools);
                     else
-                        ((Player) sender).openInventory(Init.getChestDonationHolder().getInventory());
+                        ((Player) sender).openInventory(getChestDonationHolder().getInventory());
 
             }
 
@@ -127,10 +132,23 @@ public class Commands implements CommandExecutor {
 
         if (!(sender instanceof Player))
             sender.sendMessage("Consoles can't use this command!");
-        else if (!Init.getMaintenanceCheck())
-            ((Player) sender).openInventory(Init.getChestRandomHolder().getInventory());
+        else if (!getMaintenanceCheck())
+            ((Player) sender).openInventory(getChestRandomHolder().getInventory());
         else
-            sender.sendMessage(Init.getMaintenanceMessage());
+            sender.sendMessage(getMaintenanceMessage());
+
+    }
+
+    private void commandXChest(CommandSender sender) {
+
+        if (!(sender instanceof Player))
+            sender.sendMessage("Consoles can't use this command!");
+        else if (!getMaintenanceCheck()) {
+            Player player = (Player) sender;
+            Inventory chestExpInventory = Bukkit.createInventory(player, 54, ChatColor.DARK_GREEN + "Experience Chest");
+            player.openInventory(chestExpInventory);
+        } else
+            sender.sendMessage(getMaintenanceMessage());
 
     }
 

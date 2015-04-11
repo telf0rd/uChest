@@ -21,6 +21,10 @@ commands:
     description: Views the random chest.
     usage: |
       <command> : Views the random chest.
+  xchest:
+    description: Views the experience chest.
+    usage: |
+      <command> : Views the experience chest.
 
 permissions:
   chest.staff:
