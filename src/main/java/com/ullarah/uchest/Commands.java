@@ -154,9 +154,15 @@ public class Commands implements CommandExecutor {
             sender.sendMessage("Consoles can't use this command!");
         else if (!getMaintenanceCheck()) {
             Player player = (Player) sender;
-            Inventory chestExpInventory = Bukkit.createInventory(
-                    player, 27, ChatColor.DARK_GREEN + "Experience Chest");
-            player.openInventory(chestExpInventory);
+            Integer playerLevel = player.getLevel();
+
+            if (playerLevel < 10)
+                player.sendMessage(getMsgPrefix() + "You need more than 10 levels to open this chest.");
+            else {
+                Inventory chestExpInventory = Bukkit.createInventory(
+                        player, 27, ChatColor.DARK_GREEN + "Experience Chest");
+                player.openInventory(chestExpInventory);
+            }
         } else
             sender.sendMessage(getMaintenanceMessage());
 

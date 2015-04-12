@@ -9,6 +9,7 @@ import org.bukkit.event.inventory.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import static com.ullarah.uchest.Experience.convertXP;
 import static com.ullarah.uchest.Init.*;
 
 class Events implements Listener {
@@ -101,7 +102,7 @@ class Events implements Listener {
 
         if (chestInventory.getName().matches("§2Experience Chest")) {
             ItemStack[] expItems = chestInventory.getContents();
-            giveExp(chestPlayer, expItems);
+            convertXP(chestPlayer, expItems);
             chestInventory.clear();
         }
 
@@ -132,42 +133,6 @@ class Events implements Listener {
             chestSwapBusy = true;
             chestInventory.clear();
         }
-
-    }
-
-    void giveExp(Player player, ItemStack[] items) {
-
-        Integer playerXP = player.getTotalExperience();
-        Integer playerNewXP = 0;
-
-        for (ItemStack item : items) {
-            if (item != null) {
-                Integer itemAmount = item.getAmount();
-                String itemMaterial = item.getType().name();
-
-                Integer itemXP = getPlugin().getConfig().getConfigurationSection("materials").getInt(itemMaterial);
-
-                playerNewXP += (itemXP * itemAmount);
-            }
-        }
-
-        Integer playerTotalXP = playerXP + playerNewXP;
-
-        player.setTotalExperience(playerTotalXP);
-        player.setLevel(0);
-        player.setExp(0);
-
-        for (; playerTotalXP > player.getExpToLevel(); ) {
-            playerTotalXP -= player.getExpToLevel();
-            player.setLevel(player.getLevel() + 1);
-        }
-
-        float xp = (float) playerTotalXP / (float) player.getExpToLevel();
-        player.setExp(xp);
-
-        player.sendMessage(playerNewXP > 0 ? getMsgPrefix() + "You gained " + ChatColor.GREEN + playerNewXP +
-                "xp" + ChatColor.RESET + "!" : getMsgPrefix() + "You gained no xp.");
-
 
     }
 
